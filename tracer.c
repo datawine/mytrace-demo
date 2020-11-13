@@ -101,7 +101,7 @@ main(int argc, char *argv[]) {
             perror("get regs");
             break;
         }
-        if (REG(regs) == SYS_mmap) {
+        if (REG(regs) == SYS_mmap) { // specific logic
             set_uarg(regs);
             if (is_insyscall)
                 print_mmap(regs);
